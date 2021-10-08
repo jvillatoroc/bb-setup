@@ -39,7 +39,7 @@ mkdir ~/tools
 cd ~/tools
 
 # Install SecLists
-https://github.com/danielmiessler/SecLists.git
+git clone https://github.com/danielmiessler/SecLists.git
 cd ~/tools
 
 # install nmap
