@@ -35,14 +35,18 @@ echo 'GOPATH="$HOME/go"' >> ~/.profile
 echo 'PATH="$PATH:$GOPATH/bin"' >> ~/.profile
 source ~/.profile
 
+mkdir ~/tools
+cd ~/tools
+
+# Install SecLists
+https://github.com/danielmiessler/SecLists.git
+cd ~/tools
+
 # install nmap
 pkg_install nmap
 
 # insstall ffuf
 sudo go get -u github.com/ffuf/ffuf
-
-mkdir ~/tools
-cd ~/tools
 
 # install Sublist3r
 git clone https://github.com/aboul3la/Sublist3r.git
