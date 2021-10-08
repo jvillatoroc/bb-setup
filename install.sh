@@ -58,7 +58,7 @@ cd ~/tools
 pkg_install snapd
 systemctl enable --now snapd apparmor
 snap install chromium
-curl -O https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
+curl -LO https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
 unzip aquatone_linux_amd64_1.7.0.zip
 cd ~/tools
 
