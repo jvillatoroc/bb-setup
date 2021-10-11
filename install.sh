@@ -55,9 +55,7 @@ sudo pip install -r requirements.txt
 cd ~/tools
 
 # install aquatone
-pkg_install snapd
-systemctl enable --now snapd apparmor
-snap install chromium
+pkg_install chromium
 curl -LO https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
 unzip aquatone_linux_amd64_1.7.0.zip
 cd ~/tools
