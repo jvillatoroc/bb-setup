@@ -48,6 +48,11 @@ pkg_install nmap
 # insstall ffuf
 sudo go get -u github.com/ffuf/ffuf
 
+# install amass
+#sudo go get -u github.com/OWASP/Amass.git
+go get -v github.com/OWASP/Amass/v3/...
+cd ~/tools
+
 # install Sublist3r
 git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r
