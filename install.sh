@@ -5,6 +5,7 @@ case "$OS" in
 	arch) PKG_MGR="pacman" ;;
 	debian) PKG_MGR="apt" ;;
 	kali) PKG_MGR="apt" ;;
+	ubuntu) PKG_MGR="apt" ;;
 	*) PKG_MGR="" && printf "Hadn't thought of this OS. Maybe open an issue or a pull request?"
 esac
 
@@ -21,49 +22,64 @@ esac
 
 pkg_upgrade
 
+echo "installing vim curl git zsh tor tmux golang-go unzip"
 pkg_install vim curl git zsh tor tmux golang-go unzip
+echo "done"
 
-# change shell to zsh
+echo "change shell to zsh"
 chsh -s /bin/zsh
+echo "done"
 
-# install Kali Linux Headless
-pkg_install kali-linux-headless
+# echo "install Kali Linux Headless"
+#pkg_install kali-linux-headless
+#echo "done"
 
+echo "installing python3-pip"
 pkg_install python3-pip
+echo "done"
 
+echo "setting up GOPATH"
 echo 'GOPATH="$HOME/go"' >> ~/.profile
 echo 'PATH="$PATH:$GOPATH/bin"' >> ~/.profile
 source ~/.profile
+echo "done"
 
 mkdir ~/tools
 cd ~/tools
 
-# Install SecLists
+echo "Install SecLists"
 git clone https://github.com/danielmiessler/SecLists.git
 cd ~/tools
+echo "done"
 
-# install nmap
+echo "install nmap"
 pkg_install nmap
+echo "done"
 
-# insstall ffuf
+echo "install ffuf"
 sudo go get -u github.com/ffuf/ffuf
+echo "done"
 
-# install amass
+echo "install amass"
 #sudo go get -u github.com/OWASP/Amass.git
 go get -v github.com/OWASP/Amass/v3/...
 cd ~/tools
+echo "done"
 
-# install Sublist3r
+echo "install Sublist3r"
 git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r
 sudo pip install -r requirements.txt
 cd ~/tools
+echo "done"
 
-# install aquatone
+echo "install aquatone"
 pkg_install chromium
 curl -LO https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
 unzip aquatone_linux_amd64_1.7.0.zip
 cd ~/tools
+echo "done"
 
-# install httprobe
+echo "install httprobe"
 go get -u github.com/tomnomnom/httprobe
+echo "done"
