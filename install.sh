@@ -52,6 +52,13 @@ git clone https://github.com/danielmiessler/SecLists.git
 cd ~/tools
 echo "done"
 
+echo "install dirsearch"
+git clone https://github.com/maurosoria/dirsearch.git
+cd dirsearch
+pip install -r requirements.txt
+cd ~/tools
+echo "done"
+
 echo "install nmap"
 pkg_install nmap
 echo "done"
