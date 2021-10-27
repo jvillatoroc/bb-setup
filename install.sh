@@ -62,7 +62,8 @@ echo "done"
 
 echo "install amass"
 #sudo go get -u github.com/OWASP/Amass.git
-go get -v github.com/OWASP/Amass/v3/...
+curl -LO https://github.com/OWASP/Amass/releases/download/v3.14.2/amass_linux_amd64.zip
+unzip amass_linux_amd64.zip
 cd ~/tools
 echo "done"
 
