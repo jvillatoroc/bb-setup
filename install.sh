@@ -38,6 +38,10 @@ echo "installing python3-pip"
 pkg_install python3-pip
 echo "done"
 
+echo "installing jq"
+pkg_install jq
+echo "done"
+
 echo "setting up GOPATH"
 echo 'GOPATH="$HOME/go"' >> ~/.profile
 echo 'PATH="$PATH:$GOPATH/bin"' >> ~/.profile
