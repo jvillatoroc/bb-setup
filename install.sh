@@ -22,6 +22,10 @@ esac
 
 pkg_upgrade
 
+echo "installing spice-vdagent for virtual machines"
+pkg_install spice-vdagent
+echo "done"
+
 echo "installing vim curl git zsh tor tmux golang-go unzip"
 pkg_install vim curl git zsh tor tmux golang-go unzip
 echo "done"
