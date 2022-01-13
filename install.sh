@@ -34,10 +34,6 @@ echo "change shell to zsh"
 chsh -s /bin/zsh
 echo "done"
 
-# echo "install Kali Linux Headless"
-#pkg_install kali-linux-headless
-#echo "done"
-
 echo "installing python3-pip"
 pkg_install python3-pip
 echo "done"
@@ -56,12 +52,19 @@ mkdir ~/tools
 cd ~/tools
 
 echo "Install SecLists"
+
 git clone https://github.com/danielmiessler/SecLists.git
 cd ~/tools
 echo "done"
 
 echo "install gobuster"
 go install github.com/OJ/gobuster/v3@latest
+cd ~/tools
+echo "done"
+
+echo "copying sort-subs.sh"
+curl -LO https://raw.githubusercontent.com/jvillatoroc/bb-setup/master/sort-subs.sh
+chmod +x sort-subs.sh
 cd ~/tools
 echo "done"
 
@@ -77,7 +80,7 @@ pkg_install nmap
 echo "done"
 
 echo "install ffuf"
-sudo go get -u github.com/ffuf/ffuf
+go get -u github.com/ffuf/ffuf
 echo "done"
 
 echo "install amass"
@@ -104,3 +107,8 @@ echo "done"
 echo "install httprobe"
 go get -u github.com/tomnomnom/httprobe
 echo "done"
+
+echo "install"
+git clone https://github.com/rastating/dnmasscan.git
+cd ~/tools
+echo "done
