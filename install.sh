@@ -111,4 +111,4 @@ echo "done"
 echo "install"
 git clone https://github.com/rastating/dnmasscan.git
 cd ~/tools
-echo "done
+echo "done"
