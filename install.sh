@@ -52,8 +52,12 @@ mkdir ~/tools
 cd ~/tools
 
 echo "Install SecLists"
-
 git clone https://github.com/danielmiessler/SecLists.git
+cd ~/tools
+echo "done"
+
+echo "Install commonspeak2-wordlists"
+git clone https://github.com/assetnote/commonspeak2-wordlists.git
 cd ~/tools
 echo "done"
 
