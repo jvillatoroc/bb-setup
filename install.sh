@@ -78,6 +78,12 @@ chmod +x get-scope.sh
 cd ~/tools
 echo "done"
 
+echo "copying get-scope.sh"
+curl -LO https://raw.githubusercontent.com/jvillatoroc/bb-setup/master/amass-recon.sh
+chmod +x amass-recon.sh
+cd ~/tools
+echo "done"
+
 echo "install dirsearch"
 git clone https://github.com/maurosoria/dirsearch.git
 cd dirsearch
