@@ -89,6 +89,10 @@ echo "install nmap"
 pkg_install nmap
 echo "done"
 
+echo "install sqlmap"
+pkg_install sqlmap
+echo "done"
+
 echo "install ffuf"
 go get -u github.com/ffuf/ffuf
 echo "done"
