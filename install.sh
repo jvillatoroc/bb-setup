@@ -126,6 +126,10 @@ echo "install dnsgen"
 pip3 install dnsgen
 echo "done"
 
+echo "install frida"
+pip3 install frida-tools
+echo "done"
+
 echo "install dnmasscan"
 git clone https://github.com/rastating/dnmasscan.git
 cd ~/tools
