@@ -122,7 +122,11 @@ echo "install httprobe"
 go get -u github.com/tomnomnom/httprobe
 echo "done"
 
-echo "install"
+echo "install dnsgen"
+pip3 install dnsgen
+echo "done"
+
+echo "install dnmasscan"
 git clone https://github.com/rastating/dnmasscan.git
 cd ~/tools
 echo "done"
