@@ -34,6 +34,20 @@ echo "change shell to zsh"
 chsh -s /bin/zsh
 echo "done"
 
+case "$PKG_MGR" in
+	pacman)
+		# Install AUR helper - paru
+		git clone https://aur.archlinux.org/paru.git
+		cd paru
+		makepkg -si
+		echo "paru AUR helper installed successfully"
+		cd $REPDIR
+		PKG_MGR="paru"
+		pkg_install() { sudo $PKG_MGR -S $* --noconfirm ;}
+		pkg_upgrade() { sudo $PKG_MGR -Syyu ;}
+		;;
+esac
+
 echo "installing python3-pip"
 pkg_install python3-pip
 echo "done"
@@ -132,5 +146,10 @@ echo "done"
 
 echo "install dnmasscan"
 git clone https://github.com/rastating/dnmasscan.git
+cd ~/tools
+echo "done"
+
+echo "install feroxbuster"
+pkg_install feroxbuster
 cd ~/tools
 echo "done"
