@@ -153,3 +153,8 @@ echo "install feroxbuster"
 pkg_install feroxbuster
 cd ~/tools
 echo "done"
+
+echo "install naabu"
+go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
+cd ~/tools
+echo "done"
