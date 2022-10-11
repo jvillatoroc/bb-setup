@@ -19,8 +19,7 @@ done
 echo "running dirsearch and feroxbuster on subdomains"
 for domain in `cat $PROJECT-seeds.md`; do
 	for subdomain in `cat $domain/$domain.txt`; do
-		python ~/tools/dirsearch/dirsearch.py -w ~/tools/SecLists/Discovery/Web-Content/raft-large-words.txt -u https://$subdomain/ --format plain -o $domain/$subdomain-dirsearch.txt
-		feroxbuster -u $subdomain -k -r --depth 5 --scan-limit 2 -w ~/tools/SecLists/Discovery/Web-Content/raft-large-words.txt -o $domain/$subdomain-feroxbuster.txt -v
+		feroxbuster -u $subdomain -k --redirects --depth 5 --extract-links --force-recursion -w ~/tools/SecLists/Discovery/Web-Content/raft-medium-words.txt -o $domain/$subdomain-feroxbuster.txt -vv
 	done
 done
 
