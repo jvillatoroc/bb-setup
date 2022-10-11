@@ -166,3 +166,8 @@ echo "install naabu"
 go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 cd ~/tools
 echo "done"
+
+echo "install smuggler"
+git clone https://github.com/defparam/smuggler.git
+cd ~/tools
+echo "done"
