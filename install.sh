@@ -136,6 +136,14 @@ echo "install httprobe"
 go get -u github.com/tomnomnom/httprobe
 echo "done"
 
+echo "install gospider"
+GO111MODULE=on go install github.com/jaeles-project/gospider@latest
+echo "done"
+
+echo "install hakrawler"
+go install github.com/hakluke/hakrawler@latest
+echo "done"
+
 echo "install dnsgen"
 pip3 install dnsgen
 echo "done"
