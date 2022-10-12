@@ -63,6 +63,15 @@ source ~/.profile
 echo "done"
 
 mkdir ~/tools
+
+echo "linking recon.sh"
+cp recon.sh ~/tools/
+# curl -LO https://raw.githubusercontent.com/jvillatoroc/bb-setup/master/recon.sh
+# chmod +x recon.sh
+# cd ~/tools
+echo "done"
+
+echo "going into ~/tools/"
 cd ~/tools
 
 echo "Install SecLists"
@@ -80,18 +89,6 @@ go install github.com/OJ/gobuster/v3@latest
 cd ~/tools
 echo "done"
 
-echo "copying sort-subs.sh"
-curl -LO https://raw.githubusercontent.com/jvillatoroc/bb-setup/master/sort-subs.sh
-chmod +x sort-subs.sh
-cd ~/tools
-echo "done"
-
-echo "copying get-scope.sh"
-curl -LO https://raw.githubusercontent.com/jvillatoroc/bb-setup/master/get-scope.sh
-chmod +x get-scope.sh
-cd ~/tools
-echo "done"
-
 echo "install dirsearch"
 git clone https://github.com/maurosoria/dirsearch.git
 cd dirsearch
@@ -101,20 +98,21 @@ echo "done"
 
 echo "install nmap"
 pkg_install nmap
+cd ~/tools
 echo "done"
 
 echo "install sqlmap"
 pkg_install sqlmap
+cd ~/tools
 echo "done"
 
 echo "install ffuf"
 go get -u github.com/ffuf/ffuf
+cd ~/tools
 echo "done"
 
 echo "install amass"
-#sudo go get -u github.com/OWASP/Amass.git
-curl -LO https://github.com/OWASP/Amass/releases/download/v3.14.2/amass_linux_amd64.zip
-unzip amass_linux_amd64.zip
+go install -v github.com/OWASP/Amass/v3/...@master
 cd ~/tools
 echo "done"
 
@@ -134,22 +132,27 @@ echo "done"
 
 echo "install httprobe"
 go get -u github.com/tomnomnom/httprobe
+cd ~/tools
 echo "done"
 
 echo "install gospider"
 GO111MODULE=on go install github.com/jaeles-project/gospider@latest
+cd ~/tools
 echo "done"
 
 echo "install hakrawler"
 go install github.com/hakluke/hakrawler@latest
+cd ~/tools
 echo "done"
 
 echo "install dnsgen"
 pip3 install dnsgen
+cd ~/tools
 echo "done"
 
 echo "install frida"
 pip3 install frida-tools
+cd ~/tools
 echo "done"
 
 echo "install dnmasscan"
@@ -169,12 +172,6 @@ echo "done"
 
 echo "install smuggler"
 git clone https://github.com/defparam/smuggler.git
-cd ~/tools
-echo "done"
-
-echo "copying recon.sh"
-curl -LO https://raw.githubusercontent.com/jvillatoroc/bb-setup/master/recon.sh
-chmod +x sort-subs.sh
 cd ~/tools
 echo "done"
 
