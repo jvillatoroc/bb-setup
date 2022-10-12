@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[[ -z $@ ]] && echo "give me a project name!" && exit 1
+[[ -z $@ ]] && echo "give me a project name, and make sure to create a PROJECT-seeds.md file inside there!" && exit 1
 
 PROJECT=$1
 
