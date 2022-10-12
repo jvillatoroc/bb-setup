@@ -4,7 +4,6 @@
 
 PROJECT=$1
 
-mkdir ~/recon/
 cd ~/recon/$PROJECT/
 
 echo "running amass on $PROJECT\'s seed domains"
