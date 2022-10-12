@@ -8,8 +8,9 @@ Installer for hacking box/container/vm/etc
 After making sure **both** `sudo` and `curl` is installed, run:
 
 ```
-curl -LO https://raw.githubusercontent.com/jvillatoroc/bb-setup/master/install.sh
-chmod +x install.sh
+git clone https://github.com/lachokds/bb-setup.git
+cd bb-setup
+chmod +x install.sh recon.sh
 ./install.sh
 ```
 
