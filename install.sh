@@ -171,3 +171,10 @@ echo "install smuggler"
 git clone https://github.com/defparam/smuggler.git
 cd ~/tools
 echo "done"
+
+echo "copying recon.sh"
+curl -LO https://raw.githubusercontent.com/jvillatoroc/bb-setup/master/recon.sh
+chmod +x sort-subs.sh
+cd ~/tools
+echo "done"
+
