@@ -27,7 +27,15 @@ pkg_install spice-vdagent
 echo "done"
 
 echo "installing vim curl git zsh tor tmux golang-go unzip"
-pkg_install vim curl git zsh tor tmux golang-go unzip
+pkg_install vim
+pkg_install curl
+pkg_install git
+pkg_install zsh
+pkg_install tor
+pkg_install tmux
+pkg_install golang-go
+pkg_install go
+pkg_install unzip
 echo "done"
 
 echo "change shell to zsh"
@@ -131,7 +139,7 @@ cd ~/tools
 echo "done"
 
 echo "install httprobe"
-go get -u github.com/tomnomnom/httprobe
+go install github.com/tomnomnom/httprobe@latest
 cd ~/tools
 echo "done"
 
