@@ -23,9 +23,6 @@ echo "running gospider and feroxbuster on subdomains"
 for domain in `cat $PROJECT-seeds.md`; do
 	for subdomain in `cat $domain/$domain.txt`; do
 		gospider -s "https://$subdomain" -o $subdomain/gospider --threads 20 --concurrent 10 --depth 5 --other-source --include-subs --robots
-		feroxbuster -u $subdomain -k --redirects --depth 5 --extract-links --force-recursion -w ~/tools/commonspeak2-wordlists/wordswithext/aspx.txt -o $domain/$subdomain-feroxbuster-aspx.txt -vv
-		feroxbuster -u $subdomain -k --redirects --depth 5 --extract-links --force-recursion -w ~/tools/commonspeak2-wordlists/wordswithext/jspx.txt -o $domain/$subdomain-feroxbuster-jsp.txt -vv
-		feroxbuster -u $subdomain -k --redirects --depth 5 --extract-links --force-recursion -w ~/tools/commonspeak2-wordlists/wordswithext/php.txt -o $domain/$subdomain-feroxbuster-php.txt.txt -vv
 		feroxbuster -u $subdomain -k --redirects --depth 5 --extract-links --force-recursion -w ~/tools/commonspeak2-wordlists/wordswithext/words.txt -o $domain/$subdomain-feroxbuster-words.txt -vv
 	done
 done
