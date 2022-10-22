@@ -16,7 +16,7 @@ for domain in `cat $PROJECT-seeds.md`; do
 		amass enum -brute -o $domain/$domain.txt -d $domain -v
 
 	echo "running hakrawler on $domain"
-	echo $domain | httprobe | hakrawler | tee -a $domain/$domain-hakrawler.txt
+	sed 's/^/https:\/\//g' $domain/$domain.txt | hakrawler | tee $domain/$domain-hakrawler.txt
 done
 
 echo "running gospider and feroxbuster on subdomains"
