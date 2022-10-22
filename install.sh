@@ -115,12 +115,12 @@ cd ~/tools
 echo "done"
 
 echo "install ffuf"
-go get -u github.com/ffuf/ffuf
+go install github.com/ffuf/ffuf@latest
 cd ~/tools
 echo "done"
 
 echo "install amass"
-go install -v github.com/OWASP/Amass/v3/...@master
+go install github.com/OWASP/Amass/v3/...@master
 cd ~/tools
 echo "done"
 
