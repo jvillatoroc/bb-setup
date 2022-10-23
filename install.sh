@@ -73,19 +73,19 @@ echo "done"
 mkdir ~/tools
 
 echo "linking recon.sh"
-cp recon.sh ~/tools/
+ln -s recon.sh ~/tools/
 echo "done"
 
 echo "linking asn_domains.sh"
-cp asn_domains.sh ~/tools/
+ln -s asn_domains.sh ~/tools/
 echo "done"
 
 echo "linking asn_ips.sh"
-cp asn_ips.sh ~/tools/
+ln -s asn_ips.sh ~/tools/
 echo "done"
 
 echo "linking enum_domains.sh"
-cp enum_domains.sh ~/tools/
+ln -s enum_domains.sh ~/tools/
 echo "done"
 
 echo "going into ~/tools/"
