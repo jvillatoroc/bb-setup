@@ -135,6 +135,11 @@ go install github.com/OWASP/Amass/v3/...@master
 cd ~/tools
 echo "done"
 
+echo "install github-search repo"
+git clone https://github.com/gwen001/github-search.git
+cd ~/tools
+echo "done"
+
 echo "install Sublist3r"
 git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r
