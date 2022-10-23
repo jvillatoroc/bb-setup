@@ -103,6 +103,14 @@ git clone https://github.com/assetnote/commonspeak2-wordlists.git
 cd ~/tools
 echo "done"
 
+echo "Install Jason Haddix's gist wordlists"
+mkdir jhaddix
+cd jhaddix
+curl -LO https://gist.github.com/jhaddix/b80ea67d85c13206125806f0828f4d10/raw/c81a34fe84731430741e0463eb6076129c20c4c0/content_discovery_all.txt
+curl -LO https://gist.github.com/jhaddix/f64c97d0863a78454e44c2f7119c2a6a/raw/96f4e51d96b2203f19f6381c8c545b278eaa0837/all.txt
+cd ~/tools
+echo "done"
+
 echo "install gobuster"
 go install github.com/OJ/gobuster/v3@latest
 cd ~/tools
