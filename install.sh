@@ -20,6 +20,8 @@ case "$PKG_MGR" in
 		;;
 esac
 
+REPDIR=$(pwd)
+
 pkg_upgrade
 
 echo "installing spice-vdagent for virtual machines"
@@ -73,19 +75,19 @@ echo "done"
 mkdir ~/tools
 
 echo "linking recon.sh"
-ln -s recon.sh ~/tools/
+ln -s $REPDIR/recon.sh ~/tools/
 echo "done"
 
 echo "linking asn_domains.sh"
-ln -s asn_domains.sh ~/tools/
+ln -s $REPDIR/asn_domains.sh ~/tools/
 echo "done"
 
 echo "linking asn_ips.sh"
-ln -s asn_ips.sh ~/tools/
+ln -s $REPDIR/asn_ips.sh ~/tools/
 echo "done"
 
 echo "linking enum_domains.sh"
-ln -s enum_domains.sh ~/tools/
+ln -s $REPDIR/enum_domains.sh ~/tools/
 echo "done"
 
 echo "going into ~/tools/"
