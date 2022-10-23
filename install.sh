@@ -90,6 +90,14 @@ echo "linking enum_domains.sh"
 ln -s $REPDIR/enum_domains.sh ~/tools/
 echo "done"
 
+echo "linking crawl_domains.sh"
+ln -s $REPDIR/crawl_domains.sh ~/tools/
+echo "done"
+
+echo "linking spider_domains.sh"
+ln -s $REPDIR/spider_domains.sh ~/tools/
+echo "done"
+
 echo "going into ~/tools/"
 cd ~/tools
 

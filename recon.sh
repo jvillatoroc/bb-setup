@@ -14,16 +14,12 @@ for domain in `cat $PROJECT-seeds.md`; do
 	[[ ! -a $domain/$domain.txt ]] && \
 		mkdir -p $domain && \
 		amass enum -brute -o $domain/$domain.txt -d $domain -v
-
-	echo "running hakrawler on $domain"
-	sed 's/^/https:\/\//g' $domain/$domain.txt | hakrawler | tee $domain/$domain-hakrawler.txt
 done
 
-echo "running gospider and feroxbuster on subdomains"
+echo "running feroxbuster on subdomains"
 for domain in `cat $PROJECT-seeds.md`; do
 	for subdomain in `cat $domain/$domain.txt`; do
-		gospider -s "https://$subdomain" -o $subdomain/gospider --threads 20 --concurrent 10 --depth 5 --other-source --include-other-source --subs --include-subs --sitemap --robots --quiet
-#		feroxbuster -u $subdomain -k --redirects --depth 5 --extract-links --force-recursion -w ~/tools/commonspeak2-wordlists/wordswithext/words.txt -o $domain/$subdomain-feroxbuster-words.txt -vv
+		feroxbuster -u $subdomain -k --redirects --depth 5 --extract-links --force-recursion -w ~/tools/commonspeak2-wordlists/wordswithext/words.txt -o $domain/$subdomain-feroxbuster-words.txt -vv
 	done
 done
 
