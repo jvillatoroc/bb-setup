@@ -74,9 +74,18 @@ mkdir ~/tools
 
 echo "linking recon.sh"
 cp recon.sh ~/tools/
-# curl -LO https://raw.githubusercontent.com/jvillatoroc/bb-setup/master/recon.sh
-# chmod +x recon.sh
-# cd ~/tools
+echo "done"
+
+echo "linking asn_domains.sh"
+cp asn_domains.sh ~/tools/
+echo "done"
+
+echo "linking asn_ips.sh"
+cp asn_ips.sh ~/tools/
+echo "done"
+
+echo "linking enum_domains.sh"
+cp enum_domains.sh ~/tools/
 echo "done"
 
 echo "going into ~/tools/"
