@@ -6,7 +6,7 @@ PROJECT=$1
 
 cd ~/recon/$PROJECT/
 
-echo "running amass on $PROJECT\'s seed domains"
+echo "running amass on $PROJECT's seed domains"
 for domain in `cat $PROJECT-seeds.md`; do
 	# if the file doesn't exist, create the directory and run
 	# amass. If it does, skip and move on to the next seed
@@ -23,7 +23,7 @@ echo "running gospider and feroxbuster on subdomains"
 for domain in `cat $PROJECT-seeds.md`; do
 	for subdomain in `cat $domain/$domain.txt`; do
 		gospider -s "https://$subdomain" -o $subdomain/gospider --threads 20 --concurrent 10 --depth 5 --other-source --include-other-source --subs --include-subs --sitemap --robots --quiet
-		feroxbuster -u $subdomain -k --redirects --depth 5 --extract-links --force-recursion -w ~/tools/commonspeak2-wordlists/wordswithext/words.txt -o $domain/$subdomain-feroxbuster-words.txt -vv
+#		feroxbuster -u $subdomain -k --redirects --depth 5 --extract-links --force-recursion -w ~/tools/commonspeak2-wordlists/wordswithext/words.txt -o $domain/$subdomain-feroxbuster-words.txt -vv
 	done
 done
 
