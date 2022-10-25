@@ -46,7 +46,7 @@ echo "done"
 
 case "$PKG_MGR" in
 	pacman)
-		# Install AUR helper - paru
+		echo "Install AUR helper - paru"
 		git clone https://aur.archlinux.org/paru.git
 		cd paru
 		makepkg -si
@@ -164,7 +164,14 @@ cd ~/tools
 echo "done"
 
 echo "install aquatone"
-pkg_install chromium
+case "$PKG_MGR" in
+	pacman)
+		pkg_install chromium
+		;;
+	apt)
+		sudo snap install chromium
+		;;
+esac
 curl -LO https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
 unzip aquatone_linux_amd64_1.7.0.zip
 cd ~/tools
@@ -201,7 +208,16 @@ cd ~/tools
 echo "done"
 
 echo "install feroxbuster"
-pkg_install feroxbuster
+case "$PKG_MGR" in
+	pacman)
+		pkg_install feroxbuster
+		;;
+	*)
+		curl -sLO https://github.com/epi052/feroxbuster/releases/latest/download/feroxbuster_amd64.deb.zip
+		unzip feroxbuster_amd64.deb.zip
+		sudo apt install ./feroxbuster_*_amd64.deb
+		;;
+esac
 cd ~/tools
 echo "done"
 
