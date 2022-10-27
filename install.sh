@@ -86,10 +86,6 @@ echo "linking asn_ips.sh"
 ln -s $REPDIR/asn_ips.sh ~/tools/
 echo "done"
 
-echo "linking enum_domains.sh"
-ln -s $REPDIR/enum_domains.sh ~/tools/
-echo "done"
-
 echo "linking crawl_domains.sh"
 ln -s $REPDIR/crawl_domains.sh ~/tools/
 echo "done"

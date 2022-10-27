@@ -9,5 +9,5 @@ cd ~/recon/$PROJECT/
 echo "getting domains from $PROJECT's ASN numbers"
 for ASN in `cat $PROJECT-ASNs.md`; do
 	mkdir $ASN
-	amass intel -asn $ASN -ip -o $ASN/$ASN-domains
+	amass intel -asn $ASN -o $ASN/$ASN-domains
 done

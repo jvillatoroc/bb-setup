@@ -13,5 +13,5 @@ for domain in `cat $PROJECT-seeds.md`; do
 	# domain
 	[[ ! -a $domain/$domain.txt ]] && \
 		mkdir -p $domain && \
-		amass enum -brute -o $domain/$domain-subs -d $domain -w ~/tools/jhaddix/all.txt -v
+		amass enum -brute -o $domain/$domain.txt -d $domain -w ~/tools/jhaddix/all.txt -v
 done

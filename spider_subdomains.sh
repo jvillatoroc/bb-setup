@@ -6,10 +6,7 @@ PROJECT=$1
 
 cd ~/recon/$PROJECT/
 
-echo "running gospider on subdomains"
+echo "running gospider on seed domains"
 for domain in `cat $PROJECT-seeds.md`; do
-	for subdomain in `cat $domain/$domain.txt`; do
-		mkdir $domain/$subdomain
-		gospider -s "https://$subdomain" -o $subdomain/gospider --threads 20 --concurrent 10 --depth 5 --other-source --include-other-source --subs --include-subs --sitemap --robots
-	done
+	gospider -s "https://$domain" -o $domain-gospider --threads 20 --concurrent 10 --depth 5 --other-source --include-other-source --subs --include-subs --sitemap --robots
 done
