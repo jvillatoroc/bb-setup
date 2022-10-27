@@ -86,12 +86,12 @@ echo "linking asn_ips.sh"
 ln -s $REPDIR/asn_ips.sh ~/tools/
 echo "done"
 
-echo "linking crawl_domains.sh"
-ln -s $REPDIR/crawl_domains.sh ~/tools/
+echo "linking crawl_subdomains.sh"
+ln -s $REPDIR/crawl_subdomains.sh ~/tools/
 echo "done"
 
-echo "linking spider_domains.sh"
-ln -s $REPDIR/spider_domains.sh ~/tools/
+echo "linking spider_subdomains.sh"
+ln -s $REPDIR/spider_subdomains.sh ~/tools/
 echo "done"
 
 echo "going into ~/tools/"
