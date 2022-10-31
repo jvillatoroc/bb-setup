@@ -227,3 +227,11 @@ git clone https://github.com/defparam/smuggler.git
 cd ~/tools
 echo "done"
 
+echo "install favfreak"
+git clone https://github.com/devanshbatham/FavFreak
+cd FavFreak
+virtualenv -p python3 env
+source env/bin/activate
+python3 -m pip install mmh3
+cd ~/tools
+echo "done"
