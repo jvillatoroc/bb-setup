@@ -8,5 +8,5 @@ cd ~/recon/$PROJECT/
 
 echo "running hakrawler on $domain"
 for domain in `cat $PROJECT-seeds.md`; do
-	echo $domain | httprobe | hakrawler | sed '/javascript:void(0)/d' | sort -u| tee $domain/$domain-hakrawler
+	echo $domain | httprobe | hakrawler | sed '/javascript:void(0)/d' | sort -u| tee $domain.hakrawler
 done
