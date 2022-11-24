@@ -234,3 +234,10 @@ source env/bin/activate
 python3 -m pip install mmh3
 cd ~/tools
 echo "done"
+
+echo "install knockpy"
+git clone https://github.com/guelfoweb/knock.git
+cd knock
+pip3 install -r requirements.txt
+cd ~/tools
+echo "done"
