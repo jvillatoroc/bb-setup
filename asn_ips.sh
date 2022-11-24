@@ -7,7 +7,6 @@ PROJECT=$1
 cd ~/recon/$PROJECT/
 
 echo "getting IPs from $PROJECT's ASN numbers"
-for ASN in `cat $PROJECT-ASNs.md`; do
-	mkdir $ASN
-	amass intel -asn $ASN -ip -o $ASN/$ASN-ips
+for ASN in `cat asns.txt`; do
+	amass intel -asn $ASN -ip -o ips.txt
 done
