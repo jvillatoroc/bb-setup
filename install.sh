@@ -40,6 +40,10 @@ pkg_install go
 pkg_install unzip
 echo "done"
 
+echo "copying tmux conf file"
+ln -s $REPDIR/dotfiles-desktop/.tmux.conf
+echo "done"
+
 echo "change shell to zsh"
 chsh -s /bin/zsh
 echo "done"
