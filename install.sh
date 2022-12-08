@@ -221,6 +221,7 @@ case "$PKG_MGR" in
 		curl -sLO https://github.com/epi052/feroxbuster/releases/latest/download/feroxbuster_amd64.deb.zip
 		unzip feroxbuster_amd64.deb.zip
 		sudo apt install ./feroxbuster_*_amd64.deb
+		;;
 	*)
 		sudo snap install feroxbuster
 		ln -s ~/tools/SecLists ~/snap/feroxbuster/common/SecLists/
