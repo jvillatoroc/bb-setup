@@ -73,6 +73,7 @@ echo "done"
 echo "setting up GOPATH"
 echo 'GOPATH="$HOME/go"' >> ~/.profile
 echo 'PATH="$PATH:$GOPATH/bin"' >> ~/.profile
+echo "sourcing ~/.profile"
 source ~/.profile
 echo "done"
 
