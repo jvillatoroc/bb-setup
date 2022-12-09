@@ -90,6 +90,10 @@ echo "linking asn_ips.sh"
 ln -s $REPDIR/asn_ips.sh ~/tools/
 echo "done"
 
+echo "linking brute_subdomains.sh"
+ln -s $REPDIR/brute_subdomains.sh ~/tools/
+echo "done"
+
 echo "linking crawl_subdomains.sh"
 ln -s $REPDIR/crawl_subdomains.sh ~/tools/
 echo "done"
