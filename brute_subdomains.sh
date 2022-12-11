@@ -8,5 +8,5 @@ cd ~/recon/$PROJECT/
 
 echo "running amass on $PROJECT's seed domains"
 for domain in `cat $PROJECT-seeds.md`; do
-	amass enum -brute -o $domain.txt -d $domain -w ~/tools/jhaddix/all.txt -v
+	amass enum -brute -o $domain.txt -d $domain -v
 done
