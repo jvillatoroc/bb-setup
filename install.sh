@@ -222,6 +222,12 @@ cd ~/tools
 echo "done"
 
 echo "install naabu"
+case $PKG_MGR in
+	apt)
+		pkg_install golang-github-akrennmair-gopcap-dev ;;
+	*)
+		;;
+esac
 go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 cd ~/tools
 echo "done"
