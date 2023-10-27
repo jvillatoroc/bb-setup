@@ -44,9 +44,9 @@ echo "copying tmux conf file"
 ln -s $REPDIR/dotfiles-desktop/.tmux.conf
 echo "done"
 
-echo "change shell to zsh"
-chsh -s /bin/zsh
-echo "done"
+#echo "change shell to zsh"
+#chsh -s /bin/zsh
+#echo "done"
 
 case "$PKG_MGR" in
 	pacman)
@@ -251,4 +251,29 @@ git clone https://github.com/guelfoweb/knock.git
 cd knock
 pip3 install -r requirements.txt
 cd ~/tools
+echo "done"
+
+echo "install httpx" && \
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest && \
+cd ~/tools && \
+echo "done"
+
+echo "install waybackurls" && \
+go install github.com/tomnomnom/waybackurls@latest && \
+cd ~/tools && \
+echo "done"
+
+echo "install WebAssembly Binary Toolkit (wabt)" && \
+pkg_install wabt && \
+cd ~/tools && \
+echo "done"
+
+echo "install subfinder" && \
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest && \
+cd ~/tools && \
+echo "done"
+
+echo "install nuclei" && \
+go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest &&
+cd ~/tools && \
 echo "done"
