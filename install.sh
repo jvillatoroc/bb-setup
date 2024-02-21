@@ -225,6 +225,7 @@ echo "install naabu"
 case $PKG_MGR in
 	apt)
 		pkg_install golang-github-akrennmair-gopcap-dev ;;
+		pkg_install libpcap-dev
 	*)
 		;;
 esac
