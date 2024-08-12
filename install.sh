@@ -41,7 +41,7 @@ pkg_install unzip
 echo "done"
 
 echo "copying tmux conf file"
-ln -s $REPDIR/dotfiles-desktop/.tmux.conf
+ln -s $REPDIR/.tmux.conf
 echo "done"
 
 #echo "change shell to zsh"
@@ -78,10 +78,6 @@ source ~/.profile
 echo "done"
 
 mkdir ~/tools
-
-echo "linking recon.sh"
-ln -s $REPDIR/recon.sh ~/tools/
-echo "done"
 
 echo "linking spider_subdomains.sh"
 ln -s $REPDIR/spider_subdomains.sh ~/tools/
