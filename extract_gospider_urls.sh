@@ -1,3 +1,3 @@
 #!/bin/bash
 
-jq '.type="url"|.output' $1 | sed 's/"//; s/"$//'
+jq -r 'select(.status != 0 and .status != 404)|.output' $1
