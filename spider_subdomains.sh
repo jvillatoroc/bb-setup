@@ -1,12 +1,8 @@
 #!/bin/bash
 
-[[ -z $@ ]] && echo "give me a project name, and make sure to create a PROJECT-seeds.md file inside there!" && exit 1
-
-PROJECT=$1
-
-cd ~/recon/$PROJECT/
+[[ -z $@ ]] && echo "domains.txt file missing!" && exit 1
 
 echo "running gospider on seed domains"
-for domain in `cat $PROJECT-seeds.md`; do
+for domain in `cat domains.txt`; do
 	gospider -s "https://$domain" -o gospider --threads 20 --concurrent 10 --depth 10 --other-source --include-other-source --subs --include-subs --sitemap --robots --json
 done

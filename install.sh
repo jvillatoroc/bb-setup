@@ -83,22 +83,6 @@ echo "linking recon.sh"
 ln -s $REPDIR/recon.sh ~/tools/
 echo "done"
 
-echo "linking asn_domains.sh"
-ln -s $REPDIR/asn_domains.sh ~/tools/
-echo "done"
-
-echo "linking asn_ips.sh"
-ln -s $REPDIR/asn_ips.sh ~/tools/
-echo "done"
-
-echo "linking brute_subdomains.sh"
-ln -s $REPDIR/brute_subdomains.sh ~/tools/
-echo "done"
-
-echo "linking crawl_subdomains.sh"
-ln -s $REPDIR/crawl_subdomains.sh ~/tools/
-echo "done"
-
 echo "linking spider_subdomains.sh"
 ln -s $REPDIR/spider_subdomains.sh ~/tools/
 echo "done"
