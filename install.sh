@@ -81,6 +81,7 @@ mkdir ~/tools
 
 echo "linking spider_subdomains.sh"
 ln -s $REPDIR/spider_subdomains.sh ~/tools/
+pip3 install colored
 echo "done"
 
 echo "linking extract_gospider_urls.sh"
